@@ -2,16 +2,7 @@
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
+    /* メッセージの内容がご自身のアプリに適さない場合には、必要に応じて修正願います */
 
     'accepted' => ':attributeを承認してください。',
     'accepted_if' => ':otherが:valueの場合、:attributeを承認してください。',
@@ -184,6 +175,7 @@ return [
     */
 
     'attributes' => [
+        'memo' => 'メモ',
         'address' => '住所',
         'age' => '歳',
         'amount' => '額',
