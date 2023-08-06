@@ -39,7 +39,8 @@ const searchCustomers = () => {
 
                                 <div class="flex pl-4 my-4 lg:w-2/3 w-full mx-auto">
                                     <div>
-                                        <input type="text" name="search" v-model="search" class="rounded">
+                                        <input type="text" placeholder="キーワードを入力" name="search" v-model="search"
+                                            class="rounded">
                                         <button class="bg-blue-500 text-white py-2 px-2 ml-2 rounded"
                                             @click="searchCustomers">検索</button>
                                     </div>
@@ -57,10 +58,10 @@ const searchCustomers = () => {
                                                     Id</th>
                                                 <th
                                                     class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
-                                                    氏名</th>
+                                                    顧客名</th>
                                                 <th
                                                     class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
-                                                    カナ</th>
+                                                    顧客名（カナ）</th>
                                                 <th
                                                     class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                                     電話番号</th>
@@ -69,14 +70,22 @@ const searchCustomers = () => {
                                         <tbody>
                                             <tr v-for="customer in customers.data" :key="customer.id">
                                                 <td class="border-b-2 border-gray-200 px-4 py-3">
+                                                    <Link class="text-blue-400"
+                                                        :href="route('customers.show', { customer: customer.id })">
                                                     {{ customer.id }}
+                                                    </Link>
                                                 </td>
-                                                <td class="border-b-2 border-gray-200 px-4 py-3">
-                                                    {{ customer.name }}</td>
+
+                                                <td class=" border-b-2 border-gray-200 px-4 py-3">
+                                                    {{ customer.name }}
+                                                </td>
                                                 <td class="border-b-2 border-gray-200 px-4 py-3">
                                                     {{ customer.kana }}</td>
                                                 <td class="border-b-2 border-gray-200 px-4 py-3">
                                                     {{ customer.tel }}</td>
+                                                <span v-if="gender === 0">男性</span>
+                                                <span v-if="gender === 1">女性</span>
+                                                <span v-if="gender === 2">その他</span>
                                             </tr>
                                         </tbody>
                                     </table>
