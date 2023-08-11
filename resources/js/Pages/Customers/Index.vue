@@ -58,10 +58,10 @@ const searchCustomers = () => {
                                                     Id</th>
                                                 <th
                                                     class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
-                                                    顧客名</th>
+                                                    氏名</th>
                                                 <th
                                                     class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
-                                                    顧客名（カナ）</th>
+                                                    カナ</th>
                                                 <th
                                                     class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                                     電話番号</th>
@@ -83,9 +83,6 @@ const searchCustomers = () => {
                                                     {{ customer.kana }}</td>
                                                 <td class="border-b-2 border-gray-200 px-4 py-3">
                                                     {{ customer.tel }}</td>
-                                                <span v-if="gender === 0">男性</span>
-                                                <span v-if="gender === 1">女性</span>
-                                                <span v-if="gender === 2">その他</span>
                                             </tr>
                                         </tbody>
                                     </table>
