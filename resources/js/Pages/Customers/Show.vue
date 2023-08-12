@@ -34,7 +34,7 @@ const deleteCustomer = id => {
 
                                         <div class="p-2 w-full">
                                             <div class="relative">
-                                                <label for="name" class="leading-7 text-sm text-gray-600">顧客名</label>
+                                                <label for="name" class="leading-7 text-sm text-gray-600">氏名</label>
                                                 <div id="name"
                                                     class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                     {{ customer.name }}
@@ -44,7 +44,7 @@ const deleteCustomer = id => {
 
                                         <div class="p-2 w-full">
                                             <div class="relative">
-                                                <label for="kana" class="leading-7 text-sm text-gray-600">顧客名（カナ）</label>
+                                                <label for="kana" class="leading-7 text-sm text-gray-600">カナ</label>
                                                 <div id="kana"
                                                     class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                     {{ customer.kana }}
@@ -127,7 +127,7 @@ const deleteCustomer = id => {
                                         <div class="p-2 w-full">
                                             <div class="relative flex justify-around">
                                                 <Link as="button" :href="route('customers.edit', { customer: customer.id })"
-                                                    class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                                                    class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded text-lg">
                                                 編集する</Link>
 
                                                 <button @click="deleteCustomer(customer.id)"

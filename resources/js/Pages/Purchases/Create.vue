@@ -84,7 +84,7 @@ const setCustomerID = id => {
                                                 <div class="relative">
                                                     <label for="date" class="leading-7 text-sm text-gray-600">日付</label>
                                                     <input type="date" id="date" name="date" v-model="form.date"
-                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.date" />
                                             </div>
@@ -128,7 +128,8 @@ const setCustomerID = id => {
                                                             <td class="border-b-2 border-gray-200 px-4 py-3">{{ item.price
                                                             }}</td>
                                                             <td class="border-b-2 border-gray-200 px-4 py-3">
-                                                                <select name="quantity" v-model="item.quantity">
+                                                                <select name="quantity" v-model="item.quantity"
+                                                                    class=" focus:ring-slate-400 focus:ring-1 ring-slate-400  hover:ring-1">
                                                                     <option v-for="q in quantity" :value="q">{{ q }}
                                                                     </option>
                                                                 </select>
@@ -142,11 +143,12 @@ const setCustomerID = id => {
                                             </div>
                                         </div>
 
-                                        <div class="flex justify-end p-6">
+                                        <div class="flex justify-end py-6">
                                             <div class="text-end">
-                                                <label for="price" class="w-full font-medium text-gray-900 pr-10">
+                                                <label for="price"
+                                                    class="w-full px-4 py-2 font-medium pr-14 title-font tracking-wider text-gray-900 bg-gray-100 rounded-tl rounded-bl">
                                                     合計金額</label>
-                                                <div class="border-b border-gray-600 my-2 font-medium text-xl">
+                                                <div class="border-b border-gray-600 font-medium text-xl pt-4">
                                                     {{ totalPrice }} 円
                                                 </div>
                                             </div>
@@ -154,13 +156,11 @@ const setCustomerID = id => {
 
                                         <div class="p-2 w-full">
                                             <button
-                                                class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                                                class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded text-lg">
                                                 登録する</button>
                                         </div>
-
                                     </div>
                                 </div>
-
                             </form>
                         </section>
                     </div>

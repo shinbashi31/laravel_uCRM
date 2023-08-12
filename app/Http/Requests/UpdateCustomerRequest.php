@@ -47,9 +47,10 @@ class UpdateCustomerRequest extends FormRequest
         // 「半角」英数字->「全角」(A)
         // 「全角」英数字->「半角」(a)
 
-        $this->merge(['kana' => mb_convert_kana($this->kana, 'Ks')]);
-        $this->merge(['name' => mb_convert_kana($this->name, 'Ksa')]);
-        $this->merge(['address' => mb_convert_kana($this->address, 'kans')]);
-        // $this->merge(['tel' => mb_convert_kana($this->tel, 'n')]);
+        $this->merge([
+            'kana' => mb_convert_kana($this->kana, 'Ks'),
+            'name' => mb_convert_kana($this->name, 'Ksa'),
+            'address' => mb_convert_kana($this->address, 'kans')
+        ]);
     }
 }

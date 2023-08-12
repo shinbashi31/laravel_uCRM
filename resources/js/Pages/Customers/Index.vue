@@ -40,12 +40,12 @@ const searchCustomers = () => {
                                 <div class="flex pl-4 my-4 lg:w-2/3 w-full mx-auto">
                                     <div>
                                         <input type="text" placeholder="キーワードを入力" name="search" v-model="search"
-                                            class="rounded">
-                                        <button class="bg-blue-500 text-white py-2 px-2 ml-2 rounded"
+                                            class="bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                        <button class="bg-slate-400 hover:bg-slate-500 text-white py-2 px-2 ml-2 rounded"
                                             @click="searchCustomers">検索</button>
                                     </div>
                                     <Link as="button" :href="route('customers.create')"
-                                        class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                                        class="flex ml-auto text-white bg-slate-500 border-0 py-2 px-6 focus:outline-none hover:bg-slate-600 rounded">
                                     顧客登録</Link>
                                 </div>
 

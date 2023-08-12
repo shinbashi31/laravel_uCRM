@@ -57,9 +57,9 @@ const updateCustomer = id => {
 
                                             <div class="p-2 w-full">
                                                 <div class="relative">
-                                                    <label for="name" class="leading-7 text-sm text-gray-600">顧客名</label>
+                                                    <label for="name" class="leading-7 text-sm text-gray-600">氏名</label>
                                                     <input type="text" id="name" name="name" v-model="form.name"
-                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.name" />
                                             </div>
@@ -67,9 +67,9 @@ const updateCustomer = id => {
                                             <div class="p-2 w-full">
                                                 <div class="relative">
                                                     <label for="kana"
-                                                        class="leading-7 text-sm text-gray-600">顧客名（カナ）</label>
+                                                        class="leading-7 text-sm text-gray-600">カナ</label>
                                                     <input type="text" id="kana" name="kana" v-model="form.kana"
-                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.kana" />
                                             </div>
@@ -78,7 +78,7 @@ const updateCustomer = id => {
                                                 <div class="relative">
                                                     <label for="tel" class="leading-7 text-sm text-gray-600">電話番号</label>
                                                     <input type="tel" id="tel" name="tel" v-model="form.tel"
-                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.tel" />
                                             </div>
@@ -88,7 +88,7 @@ const updateCustomer = id => {
                                                     <label for="email"
                                                         class="leading-7 text-sm text-gray-600">メールアドレス</label>
                                                     <input type="email" id="email" name="email" v-model="form.email"
-                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.email" />
                                             </div>
@@ -99,7 +99,7 @@ const updateCustomer = id => {
                                                         class="leading-7 text-sm text-gray-600">郵便番号</label>
                                                     <input type="number" id="postcode" name="postcode"
                                                         @change="fetchAddress" v-model="form.postcode"
-                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.postcode" />
                                             </div>
@@ -108,7 +108,7 @@ const updateCustomer = id => {
                                                 <div class="relative">
                                                     <label for="address" class="leading-7 text-sm text-gray-600">住所</label>
                                                     <input type="text" id="address" name="address" v-model="form.address"
-                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.address" />
                                             </div>
@@ -118,7 +118,7 @@ const updateCustomer = id => {
                                                     <label for="birthday"
                                                         class="leading-7 text-sm text-gray-600">生年月日</label>
                                                     <input type="date" id="birthday" name="birthday" v-model="form.birthday"
-                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.birthday" />
                                             </div>
@@ -128,17 +128,17 @@ const updateCustomer = id => {
                                                     性別
                                                 </label>
                                                 <div class="relative flex justify-around">
-                                                    <div><input type="radio" id="gender" name="gender" v-model="form.gender"
-                                                            value="0" class="mr-2">
-                                                        男性
+                                                    <div>
+                                                        <input type="radio" id="male" name="gender" v-model="form.gender" value="0" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="male">男性</label>
                                                     </div>
-                                                    <div><input type="radio" id="gender" name="gender" v-model="form.gender"
-                                                            value="1" class="mr-2">
-                                                        女性
-                                                    </div>
-                                                    <div><input type="radio" id="gender" name="gender" v-model="form.gender"
-                                                            value="2" class="mr-2">
-                                                        その他
+                                                    <div>
+                                                        <input type="radio" id="female" name="gender" v-model="form.gender" value="1" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="female">女性</label>
+                                                        </div>
+                                                    <div>
+                                                        <input type="radio" id="other" name="gender" v-model="form.gender" value="2" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="other">その他</label>
                                                     </div>
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.gender" />
@@ -148,13 +148,13 @@ const updateCustomer = id => {
                                                 <div class="relative">
                                                     <label for="memo" class="leading-7 text-sm text-gray-600">メモ</label>
                                                     <textarea id="memo" name="memo" v-model="form.memo"
-                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                                                 </div>
                                             </div>
 
                                             <div class="p-2 w-full">
                                                 <button
-                                                    class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                                                    class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded text-lg">
                                                     更新する</button>
                                             </div>
 
