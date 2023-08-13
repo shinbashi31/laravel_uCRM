@@ -1,7 +1,8 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head, Link } from '@inertiajs/vue3';
-import { router } from '@inertiajs/vue3'
+import { router } from '@inertiajs/vue3';
+import dayjs from 'dayjs';
 
 defineProps({
     customer: Object
@@ -96,8 +97,8 @@ const deleteCustomer = id => {
                                             <div class="relative">
                                                 <label for="birthday" class="leading-7 text-sm text-gray-600">生年月日</label>
                                                 <div id="birthday"
-                                                    class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                                                    {{ customer.birthday }}
+                                                    class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out tabular-nums">
+                                                    {{ dayjs(customer.birthday).format('YYYY / MM / DD') }}
                                                 </div>
                                             </div>
                                         </div>

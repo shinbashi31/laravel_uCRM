@@ -70,14 +70,16 @@ const updateItem = id => {
                                                 <InputError class="mb-2" :message="errors.price" />
                                             </div>
 
-                                            <div class="p-2 w-full">
+                                            <div class="p-2 my-4 w-full">
                                                 <div class="relative flex justify-around">
                                                     <div><input type="radio" id="is_selling" name="is_selling"
-                                                            v-model="form.is_selling" value="1" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            v-model="form.is_selling" value="1"
+                                                            class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                                         販売中
                                                     </div>
                                                     <div><input type="radio" id="is_selling" name="is_selling"
-                                                            v-model="form.is_selling" value="0" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                            v-model="form.is_selling" value="0"
+                                                            class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                                         停止中
                                                     </div>
                                                 </div>

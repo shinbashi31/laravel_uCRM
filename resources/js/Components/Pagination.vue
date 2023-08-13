@@ -11,8 +11,8 @@ defineProps({ links: Array })
                 <div v-if="link.url === null" class="mr-1 mb-1 px-4 py-3 text-sm leading-4
                 text-gray-400 border rounded" v-html="link.label" />
                 <Link v-else
-                    class="mr-1 mb-1 px-4 py-3 text-sm leading-4 border rounded hover:bg-white focus:border-slate-500 focus:text-slate-500"
-                    :class="{ 'bg-slate-500 text-white': link.active }" :href="link.url" v-html="link.label" />
+                    class="mr-1 mb-1 px-4 py-3 text-sm leading-4 border rounded  focus:border-gray-500 focus:text-gray-600"
+                    :class="{ 'bg-gray-400 text-white': link.active }" :href="link.url" v-html="link.label" />
             </template>
         </div>
     </div>

@@ -66,8 +66,7 @@ const updateCustomer = id => {
 
                                             <div class="p-2 w-full">
                                                 <div class="relative">
-                                                    <label for="kana"
-                                                        class="leading-7 text-sm text-gray-600">カナ</label>
+                                                    <label for="kana" class="leading-7 text-sm text-gray-600">カナ</label>
                                                     <input type="text" id="kana" name="kana" v-model="form.kana"
                                                         class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
@@ -123,21 +122,27 @@ const updateCustomer = id => {
                                                 <InputError class="mb-2" :message="errors.birthday" />
                                             </div>
 
-                                            <div class="p-2 w-full">
+                                            <div class="p-2 my-2 w-full">
                                                 <label for="gender" class="leading-7 text-sm text-gray-600">
                                                     性別
                                                 </label>
                                                 <div class="relative flex justify-around">
                                                     <div>
-                                                        <input type="radio" id="male" name="gender" v-model="form.gender" value="0" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <input type="radio" id="male" name="gender" v-model="form.gender"
+                                                            value="0"
+                                                            class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                                         <label for="male">男性</label>
                                                     </div>
                                                     <div>
-                                                        <input type="radio" id="female" name="gender" v-model="form.gender" value="1" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <input type="radio" id="female" name="gender" v-model="form.gender"
+                                                            value="1"
+                                                            class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                                         <label for="female">女性</label>
-                                                        </div>
+                                                    </div>
                                                     <div>
-                                                        <input type="radio" id="other" name="gender" v-model="form.gender" value="2" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <input type="radio" id="other" name="gender" v-model="form.gender"
+                                                            value="2"
+                                                            class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                                         <label for="other">その他</label>
                                                     </div>
                                                 </div>

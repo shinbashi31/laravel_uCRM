@@ -56,7 +56,8 @@ const storeCustomer = () => {
                                             <div class="p-2 w-full">
                                                 <div class="relative">
                                                     <label for="name" class="leading-7 text-sm text-gray-600">氏名</label>
-                                                    <input type="text" id="name" name="name" v-model="form.name" placeholder="例) 山田 太郎"
+                                                    <input type="text" id="name" name="name" v-model="form.name"
+                                                        placeholder="例) 山田 太郎"
                                                         class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.name" />
@@ -64,9 +65,9 @@ const storeCustomer = () => {
 
                                             <div class="p-2 w-full">
                                                 <div class="relative">
-                                                    <label for="kana"
-                                                        class="leading-7 text-sm text-gray-600">カナ</label>
-                                                    <input type="text" id="kana" name="kana" v-model="form.kana" placeholder="例) ヤマダ タロウ"
+                                                    <label for="kana" class="leading-7 text-sm text-gray-600">カナ</label>
+                                                    <input type="text" id="kana" name="kana" v-model="form.kana"
+                                                        placeholder="例) ヤマダ タロウ"
                                                         class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.kana" />
@@ -75,7 +76,8 @@ const storeCustomer = () => {
                                             <div class="p-2 w-full">
                                                 <div class="relative">
                                                     <label for="tel" class="leading-7 text-sm text-gray-600">電話番号</label>
-                                                    <input type="tel" id="tel" name="tel" v-model="form.tel" placeholder="例) 09012345678"
+                                                    <input type="tel" id="tel" name="tel" v-model="form.tel"
+                                                        placeholder="例) 09012345678"
                                                         class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.tel" />
@@ -85,7 +87,8 @@ const storeCustomer = () => {
                                                 <div class="relative">
                                                     <label for="email"
                                                         class="leading-7 text-sm text-gray-600">メールアドレス</label>
-                                                    <input type="email" id="email" name="email" v-model="form.email" placeholder="例) xxx@exanple.com"
+                                                    <input type="email" id="email" name="email" v-model="form.email"
+                                                        placeholder="例) xxx@exanple.com"
                                                         class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.email" />
@@ -96,7 +99,8 @@ const storeCustomer = () => {
                                                     <label for="postcode"
                                                         class="leading-7 text-sm text-gray-600">郵便番号</label>
                                                     <input type="number" id="postcode" name="postcode"
-                                                        @change="fetchAddress" v-model="form.postcode" placeholder="例) 1000001"
+                                                        @change="fetchAddress" v-model="form.postcode"
+                                                        placeholder="例) 1000001"
                                                         class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.postcode" />
@@ -105,7 +109,8 @@ const storeCustomer = () => {
                                             <div class="p-2 w-full">
                                                 <div class="relative">
                                                     <label for="address" class="leading-7 text-sm text-gray-600">住所</label>
-                                                    <input type="text" id="address" name="address" v-model="form.address" placeholder="例) 東京都千代田区千代田12345"
+                                                    <input type="text" id="address" name="address" v-model="form.address"
+                                                        placeholder="例) 東京都千代田区千代田12345"
                                                         class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                 </div>
                                                 <InputError class="mb-2" :message="errors.address" />
@@ -122,25 +127,31 @@ const storeCustomer = () => {
                                             </div>
 
                                             <div class="p-2 w-full">
-                                                    <label for="gender" class="leading-7 text-sm text-gray-600">
-                                                        性別
-                                                    </label>
-                                                    <div class="relative flex justify-around">
-                                                        <div>
-                                                            <input type="radio" id="male" name="gender" v-model="form.gender" value="0" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                            <label for="male">男性</label>
-                                                        </div>
-                                                        <div>
-                                                            <input type="radio" id="female" name="gender" v-model="form.gender" value="1" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                            <label for="female">女性</label>
-                                                            </div>
-                                                        <div>
-                                                            <input type="radio" id="other" name="gender" v-model="form.gender" value="2" class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                            <label for="other">その他</label>
-                                                        </div>
+                                                <label for="gender" class="leading-7 text-sm text-gray-600">
+                                                    性別
+                                                </label>
+                                                <div class="relative flex justify-around">
+                                                    <div>
+                                                        <input type="radio" id="male" name="gender" v-model="form.gender"
+                                                            value="0"
+                                                            class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="male">男性</label>
                                                     </div>
-                                                    <InputError class="mb-2" :message="errors.gender" />
+                                                    <div>
+                                                        <input type="radio" id="female" name="gender" v-model="form.gender"
+                                                            value="1"
+                                                            class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="female">女性</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="radio" id="other" name="gender" v-model="form.gender"
+                                                            value="2"
+                                                            class="w-4 h-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="other">その他</label>
+                                                    </div>
                                                 </div>
+                                                <InputError class="mb-2" :message="errors.gender" />
+                                            </div>
 
                                             <div class="p-2 w-full">
                                                 <div class="relative">

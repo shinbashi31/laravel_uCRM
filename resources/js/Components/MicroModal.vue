@@ -39,11 +39,11 @@ const setCustomer = e => {
 
 <template>
     <div v-show="isShow" class="modal" id="modal-1" aria-hidden="true">
-        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close @click.self="toggleStatus">
             <div class="modal__container w-2/3" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <header class="modal__header">
-                    <h2 class="modal__title text-slate-400" id="modal-1-title">
-                        <label class="text-slate-500">検索結果</label>
+                    <h2 class="modal__title text-gray-400" id="modal-1-title">
+                        <label class="text-gray-500">検索結果</label>
                     </h2>
                     <button @click="toggleStatus" type="button" class="modal__close" aria-label="Close modal"
                         data-micromodal-close></button>
@@ -68,7 +68,7 @@ const setCustomer = e => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="customer in customers.value.data" :key="customer.id">
+                                <tr v-for=" customer  in  customers.value.data " :key="customer.id">
                                     <td class="border-b-2 border-gray-200 px-4 py-3">
                                         <button @click="setCustomer({ id: customer.id, name: customer.name })" type="button"
                                             class="text-blue-400">
