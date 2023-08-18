@@ -153,21 +153,6 @@ const setCustomerID = id => {
                                             </div>
                                         </div>
 
-
-
-
-
-                                        <!-- <div class="flex justify-end py-6">
-                                        <div class="text-end">
-                                            <label for="price"
-                                                class="w-full px-4 py-2 font-medium pr-14 title-font tracking-wider text-gray-900 bg-gray-100 rounded-tl rounded-bl">
-                                                合計金額</label>
-                                            <div class="border-b border-gray-400 text-xl pt-4">
-                                                {{ totalPrice }} 円
-                                            </div>
-                                        </div>
-                                    </div> -->
-
                                         <div class="p-2 w-full">
                                             <button
                                                 class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded text-lg">

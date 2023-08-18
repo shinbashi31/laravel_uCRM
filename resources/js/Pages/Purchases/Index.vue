@@ -7,12 +7,20 @@ import Pagination from '@/Components/Pagination.vue';
 import dayjs from 'dayjs'
 
 const props = defineProps({
-    orders: Object
+    orders: Object,
 })
 
-onMounted(() => {
-    console.log(props.orders.data)
-})
+// onMounted(() => {
+//     console.log(props.orders.data)
+// })
+
+const search = ref('')
+
+// ref の値を取得するには .valueが必要
+const searchOrders = () => {
+    router.get(route('purchases.index', { search: search.value }))
+}
+
 </script>
 
 
@@ -39,7 +47,7 @@ onMounted(() => {
                                         <input type="text" placeholder="キーワードを入力" name="search" v-model="search"
                                             class="bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                         <button class="bg-slate-400 hover:bg-slate-500 text-white py-2 px-2 ml-2 rounded"
-                                            @click="searchCustomers">検索</button>
+                                            @click="searchOrders">検索</button>
                                     </div>
                                 </div>
 

@@ -10,25 +10,27 @@ use App\Models\Item;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\DB;
 use App\Models\Order;
+use Illuminate\Http\Request;
 
 class PurchaseController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         // dd(Order::paginate(50));
 
-        $orders = Order::groupBy('id')
+        $orders = Order::searchOrders($request->search)
+            ->groupBy('id')
             ->selectRaw('id, sum(subtotal) as total,
-            customer_name, status, created_at')
+            customer_name, customer_kana, status, created_at')
             ->paginate(50);
 
         // dd($orders);
 
         return Inertia::render('Purchases/Index', [
-            'orders' => $orders
+            'orders' => $orders,
         ]);
     }
 
