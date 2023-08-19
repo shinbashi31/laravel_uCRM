@@ -98,7 +98,7 @@ const deleteCustomer = id => {
                                                 <label for="birthday" class="leading-7 text-sm text-gray-600">生年月日</label>
                                                 <div id="birthday"
                                                     class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out tabular-nums">
-                                                    {{ dayjs(customer.birthday).format('YYYY / MM / DD') }}
+                                                    {{ dayjs(customer.birthday).format('YYYY/MM/DD') }}
                                                 </div>
                                             </div>
                                         </div>
@@ -128,11 +128,11 @@ const deleteCustomer = id => {
                                         <div class="p-2 w-full">
                                             <div class="relative flex justify-around">
                                                 <Link as="button" :href="route('customers.edit', { customer: customer.id })"
-                                                    class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded text-lg">
+                                                    class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded">
                                                 編集する</Link>
 
                                                 <button @click="deleteCustomer(customer.id)"
-                                                    class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">
+                                                    class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded">
                                                     削除する</button>
                                             </div>
                                         </div>

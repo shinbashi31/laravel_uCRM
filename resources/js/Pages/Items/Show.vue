@@ -77,11 +77,11 @@ const deleteItem = id => {
                                         <div class="p-2 w-full">
                                             <div class="relative flex justify-around">
                                                 <Link as="button" :href="route('items.edit', { item: item.id })"
-                                                    class="flex mx-auto text-white bg-slate-400 border-0 py-2 px-8 focus:outline-none hover:bg-slate-700 rounded text-lg">
+                                                    class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded">
                                                 編集する</Link>
 
                                                 <button @click="deleteItem(item.id)"
-                                                    class="flex mx-auto text-white bg-red-400 border-0 py-2 px-8 focus:outline-none hover:bg-red-700 rounded text-lg">
+                                                    class="flex mx-auto text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded">
                                                     削除する</button>
                                             </div>
                                         </div>

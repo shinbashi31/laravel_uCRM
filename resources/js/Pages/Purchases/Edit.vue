@@ -123,7 +123,8 @@ const quantity = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
                                                             </td>
                                                             <td class="border-b-2 border-gray-200 px-4 py-3">{{ item.name }}
                                                             </td>
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3">{{ item.price
+                                                            <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">{{
+                                                                item.price
                                                             }}</td>
                                                             <td class="border-b-2 border-gray-200 px-4 py-3">
                                                                 <select name="quantity" v-model="item.quantity"
@@ -132,7 +133,7 @@ const quantity = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
                                                                     </option>
                                                                 </select>
                                                             </td>
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3">
+                                                            <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">
                                                                 {{ item.price * item.quantity }}
                                                             </td>
                                                         </tr>
@@ -146,8 +147,8 @@ const quantity = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
                                                 <label for="price" class="leading-7 text-sm text-gray-600">
                                                     合計金額</label>
                                                 <div
-                                                    class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                                                    {{ totalPrice }} 円
+                                                    class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out tabular-nums">
+                                                    {{ totalPrice }}円
                                                 </div>
                                             </div>
                                         </div>
@@ -157,19 +158,19 @@ const quantity = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
                                                 <div>
                                                     <input type="radio" id="status" v-model="form.status" name="status"
                                                         value="1"
-                                                        class="w-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">キャンセルしない
+                                                        class="w-4 mr-2 text-slate-400 bg-slate-100 border-gray-300 focus:ring-slate-400 focus:ring-1">キャンセルしない
                                                 </div>
                                                 <div>
                                                     <input type="radio" id="status" v-model="form.status" name="status"
                                                         value="0"
-                                                        class="w-4 mr-2 text-slate-600 bg-gray-100 border-gray-300 focus:ring-slate-500 dark:focus:ring-slate-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">キャンセルする
+                                                        class="w-4 mr-2 text-slate-400 bg-slate-100 border-gray-300 focus:ring-slate-400 focus:ring-1">キャンセルする
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="p-2 w-full">
                                             <button
-                                                class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded text-lg">
+                                                class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded">
                                                 更新する</button>
                                         </div>
                                     </div>

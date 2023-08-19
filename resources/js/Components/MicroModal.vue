@@ -80,7 +80,7 @@ const setCustomer = e => {
                                     </td>
                                     <td class="border-b-2 border-gray-200 px-4 py-3">
                                         {{ customer.kana }}</td>
-                                    <td class="border-b-2 border-gray-200 px-4 py-3">
+                                    <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">
                                         {{ customer.tel }}</td>
                                 </tr>
                             </tbody>
@@ -95,9 +95,9 @@ const setCustomer = e => {
         </div>
     </div>
 
-    <input name="customer" v-model="search" type="text" placeholder="キーワードで検索できます"
+    <input name="customer" v-model="search" type="text" placeholder="氏名 または 電話番号で検索できます"
         class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
 
     <button @click="searchCustomers" type="button" data-micromodal-trigger="modal-1"
-        class="c-button flex mx-auto text-white bg-slate-400 border-0 py-2 px-8  mt-1 focus:outline-none hover:bg-slate-500 rounded text-lg">検索</button>
+        class="c-button flex mx-auto text-white bg-slate-400 border-0 py-2 px-8  mt-1 focus:outline-none hover:bg-slate-500 rounded">検索</button>
 </template>

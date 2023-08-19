@@ -84,7 +84,7 @@ const searchOrders = () => {
                                                 <td class=" border-b-2 border-gray-200 px-4 py-3">
                                                     {{ order.customer_name }}
                                                 </td>
-                                                <td class="border-b-2 border-gray-200 px-4 py-3">
+                                                <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">
                                                     {{ order.total }}</td>
                                                 <td class="border-b-2 border-gray-200 px-4 py-3">
                                                     <span v-if="order.status === 1">継続中</span>

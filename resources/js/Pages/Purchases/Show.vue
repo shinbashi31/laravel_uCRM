@@ -44,7 +44,7 @@ const setCustomerID = id => {
                                                     <label for="date" class="leading-7 text-sm text-gray-600">日付</label>
                                                     <div id="date" name="date"
                                                         class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out tabular-nums">
-                                                        {{ dayjs(props.order[0].created_at).format('YYYY / MM / DD') }}
+                                                        {{ dayjs(props.order[0].created_at).format('YYYY/MM/DD') }}
                                                     </div>
                                                 </div>
                                             </div>
@@ -90,13 +90,13 @@ const setCustomerID = id => {
                                                             <td class="border-b-2 border-gray-200 px-4 py-3">
                                                                 {{ item.item_name }}
                                                             </td>
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3">
+                                                            <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">
                                                                 {{ item.item_price }}
                                                             </td>
                                                             <td class="border-b-2 border-gray-200 px-4 py-3">
                                                                 {{ item.quantity }}
                                                             </td>
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3">
+                                                            <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">
                                                                 {{ item.subtotal }}
                                                             </td>
                                                         </tr>
@@ -137,7 +137,7 @@ const setCustomerID = id => {
                                                     キャンセル日</label>
                                                 <div v-if="props.order[0].status == false"
                                                     class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                                                    {{ dayjs(props.order[0].updated_at).format('YYYY / MM / DD') }}
+                                                    {{ dayjs(props.order[0].updated_at).format('YYYY/MM/DD') }}
                                                 </div>
                                             </div>
                                         </div>
@@ -146,7 +146,7 @@ const setCustomerID = id => {
                                         <div v-if="props.order[0].status == true" class="p-2 w-full">
                                             <Link as="button"
                                                 :href="route('purchases.edit', { purchase: props.order[0].id })"
-                                                class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded text-lg">
+                                                class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded">
                                             編集する</Link>
                                         </div>
                                     </div>

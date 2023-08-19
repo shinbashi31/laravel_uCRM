@@ -18,7 +18,7 @@ const barData = reactive({
         {
             label: '売上',
             data: totals,
-            backgroundColor: "rgb(75, 192, 192)",
+            backgroundColor: "rgb(176, 196, 222)",
             tension: 0.1,
         }]
 })
@@ -26,7 +26,7 @@ const barData = reactive({
 
 
 <template>
-    <div class="flex justify-center">
+    <div class="flex justify-center py-12">
         <div v-show="props.data" class=" w-3/4">
             <BarChart :chartData="barData" />
         </div>

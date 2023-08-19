@@ -125,7 +125,8 @@ const setCustomerID = id => {
                                                             </td>
                                                             <td class="border-b-2 border-gray-200 px-4 py-3">{{ item.name }}
                                                             </td>
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3">{{ item.price
+                                                            <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">{{
+                                                                item.price
                                                             }}</td>
                                                             <td class="border-b-2 border-gray-200 px-4 py-3">
                                                                 <select name="quantity" v-model="item.quantity"
@@ -155,7 +156,7 @@ const setCustomerID = id => {
 
                                         <div class="p-2 w-full">
                                             <button
-                                                class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded text-lg">
+                                                class="flex mx-auto text-white bg-slate-500 border-0 py-2 px-8 focus:outline-none hover:bg-slate-600 rounded">
                                                 登録する</button>
                                         </div>
                                     </div>
