@@ -5,6 +5,7 @@ import { reactive, onMounted } from 'vue';
 import { getToday } from '@/common';
 import axios from 'axios';
 import Chart from '@/Components/Chart.vue';
+import ResultTable from '@/Components/ResultTable.vue';
 // import dayjs from 'dayjs';
 // import 'dayjs/locale/ja';
 
@@ -36,6 +37,7 @@ const getData = async () => {
                 data.data = res.data.data
                 data.labels = res.data.labels
                 data.totals = res.data.totals
+                data.type = res.data.type
                 console.log(res.data)
             })
     } catch (e) {
@@ -78,6 +80,11 @@ const getData = async () => {
                                             class="w-4 h-4 text-slate-400 bg-slate-100 border-gray-300 focus:ring-slate-400 focus:ring-1">
                                         <span class="px-2">年別</span>
                                     </div>
+                                    <div>
+                                        <input type="radio" v-model="form.type" value="decile"
+                                            class="w-4 h-4 text-slate-400 bg-slate-100 border-gray-300 focus:ring-slate-400 focus:ring-1">
+                                        <span class="px-2">デシル分析</span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -100,29 +107,10 @@ const getData = async () => {
 
                         <div v-show="data.data">
                             <Chart :data="data" />
+                            <ResultTable :data="data" />
                         </div>
 
-                        <div v-show="data.data" class="lg:w-3/4 mx-auto overflow-auto flex justify-center mt-6">
-                            <table class="table-auto w-3/4 text-left whitespace-no-wrap">
-                                <thead>
-                                    <tr class="text-justify">
-                                        <th
-                                            class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
-                                            年月日</th>
-                                        <th
-                                            class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
-                                            売上</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr v-for="item in data.data" :key="item.date" class="tabular-nums">
-                                        <td class="border-b-2 border-gray-200 px-4 py-3">
-                                            {{ (item.date) }}</td>
-                                        <td class="border-b-2 border-gray-200 px-4 py-3">{{ item.total }}円</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+
 
                     </div>
                 </div>
