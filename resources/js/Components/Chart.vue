@@ -26,8 +26,8 @@ const barData = reactive({
 
 
 <template>
-    <div class="flex justify-center py-12">
-        <div v-show="props.data" class=" w-3/4">
+    <div class="flex justify-center py-6">
+        <div v-show="props.data" class="w-3/4">
             <BarChart :chartData="barData" />
         </div>
     </div>
