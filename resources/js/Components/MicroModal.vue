@@ -40,7 +40,7 @@ const setCustomer = e => {
 <template>
     <div v-show="isShow" class="modal" id="modal-1" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close @click.self="toggleStatus">
-            <div class="modal__container w-2/3" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <div class="modal__container md:w-2/3" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <header class="modal__header">
                     <h2 class="modal__title text-gray-400" id="modal-1-title">
                         <label class="text-gray-500">検索結果</label>
@@ -54,33 +54,33 @@ const setCustomer = e => {
                             <thead>
                                 <tr>
                                     <th
-                                        class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
+                                        class="md:px-4 md:py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
                                         Id</th>
                                     <th
-                                        class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                        class="md:px-4 md:py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                         氏名</th>
                                     <th
-                                        class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                        class="md:px-4 md:py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                         カナ</th>
                                     <th
-                                        class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                        class="md:px-4 md:py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                         電話番号</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr v-for=" customer  in  customers.value.data " :key="customer.id">
-                                    <td class="border-b-2 border-gray-200 px-4 py-3">
+                                    <td class="border-b-2 border-gray-200 md:px-4 md:py-3">
                                         <button @click="setCustomer({ id: customer.id, name: customer.name })" type="button"
                                             class="text-blue-400">
                                             {{ customer.id }}
                                         </button>
                                     </td>
-                                    <td class=" border-b-2 border-gray-200 px-4 py-3">
+                                    <td class=" border-b-2 border-gray-200 md:px-4 md:py-3">
                                         {{ customer.name }}
                                     </td>
-                                    <td class="border-b-2 border-gray-200 px-4 py-3">
+                                    <td class="border-b-2 border-gray-200 md:px-4 md:py-3">
                                         {{ customer.kana }}</td>
-                                    <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">
+                                    <td class="border-b-2 border-gray-200 md:px-4 md:py-3 tabular-nums">
                                         {{ customer.tel }}</td>
                                 </tr>
                             </tbody>

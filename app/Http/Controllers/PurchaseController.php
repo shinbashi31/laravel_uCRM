@@ -72,7 +72,11 @@ class PurchaseController extends Controller
 
             DB::commit();
 
-            return to_route('dashboard');
+            return to_route('purchases.index')
+                ->with([
+                    'message' => '登録しました',
+                    'status' => 'success'
+                ]);
         } catch (\Exception $e) {
             DB::rollback();
         }
@@ -165,7 +169,12 @@ class PurchaseController extends Controller
             $purchase->items()->sync($items);
 
             DB::commit();
-            return to_route('dashboard');
+
+            return to_route('purchases.index')
+                ->with([
+                    'message' => '更新しました',
+                    'status' => 'success'
+                ]);
         } catch (\Exception $e) {
             DB::rollback();
         }

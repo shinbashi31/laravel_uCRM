@@ -29,17 +29,17 @@ const searchCustomers = () => {
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">
+                    <div class="md:p-6 text-gray-900">
                         <section class="text-gray-600 body-font">
 
                             <div class="container px-5 py-8 mx-auto">
                                 <FlashMessage />
 
 
-                                <div class="flex pl-4 my-4 lg:w-2/3 w-full mx-auto">
+                                <div class="md:flex pl-4 my-4 lg:w-2/3 md:w-full mx-auto">
                                     <div>
-                                        <input type="text" placeholder="キーワードを入力" name="search" v-model="search"
-                                            class="bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                        <input type="text" placeholder="氏名 または 電話番号で検索できます" name="search" v-model="search"
+                                            class="bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 w-80 leading-8 transition-colors duration-200 ease-in-out">
                                         <button class="bg-slate-400 hover:bg-slate-500 text-white py-2 px-2 ml-2 rounded"
                                             @click="searchCustomers">検索</button>
                                     </div>
@@ -53,34 +53,34 @@ const searchCustomers = () => {
                                         <thead>
                                             <tr>
                                                 <th
-                                                    class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
+                                                    class="md:px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
                                                     Id</th>
                                                 <th
-                                                    class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                                    class="md:px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                                     氏名</th>
                                                 <th
-                                                    class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                                    class="md:px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                                     カナ</th>
                                                 <th
-                                                    class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                                    class="md:px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                                     電話番号</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr v-for="customer in customers.data" :key="customer.id">
-                                                <td class="border-b-2 border-gray-200 px-4 py-3">
+                                                <td class="md:border-b-2 border-gray-200 md:px-4 py-3">
                                                     <Link class="text-blue-400"
                                                         :href="route('customers.show', { customer: customer.id })">
                                                     {{ customer.id }}
                                                     </Link>
                                                 </td>
 
-                                                <td class=" border-b-2 border-gray-200 px-4 py-3">
+                                                <td class="border-b-2 border-gray-200 md:px-4 py-3">
                                                     {{ customer.name }}
                                                 </td>
-                                                <td class="border-b-2 border-gray-200 px-4 py-3">
+                                                <td class="border-b-2 border-gray-200 md:px-4 py-3">
                                                     {{ customer.kana }}</td>
-                                                <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">
+                                                <td class="border-b-2 border-gray-200 md:px-4 py-3 tabular-nums">
                                                     {{ customer.tel }}</td>
                                             </tr>
                                         </tbody>

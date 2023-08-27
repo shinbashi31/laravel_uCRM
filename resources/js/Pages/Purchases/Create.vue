@@ -76,7 +76,7 @@ const setCustomerID = id => {
                         <section class="text-gray-600 body-font relative">
                             <form @submit.prevent="storePurchase">
 
-                                <div class="container px-5 py-8 mx-auto">
+                                <div class="container md:px-5 md:py-8 mx-auto">
                                     <div class="lg:w-1/2 md:w-2/3 mx-auto">
                                         <div class="flex flex-wrap -m-2">
 
@@ -103,39 +103,45 @@ const setCustomerID = id => {
                                                     <thead>
                                                         <tr>
                                                             <th
-                                                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
+                                                                class="md:px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
                                                                 Id</th>
                                                             <th
-                                                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                                                class="md:px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                                                 商品名</th>
                                                             <th
-                                                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                                                class="md:px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                                                 金額</th>
                                                             <th
-                                                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                                                class="md:px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                                                 数量</th>
                                                             <th
-                                                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                                                                class="md:px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                                                                 小計</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr v-for="item in itemList" :key="item.id">
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3">{{ item.id }}
+                                                            <td class="border-b-2 border-gray-200 md:px-4 md:py-3">{{
+                                                                item.id
+                                                            }}
                                                             </td>
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3">{{ item.name }}
+                                                            <td class="border-b-2 border-gray-200 md:px-4 md:py-3">{{
+                                                                item.name
+                                                            }}
                                                             </td>
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3 tabular-nums">{{
-                                                                item.price
-                                                            }}</td>
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3">
+                                                            <td
+                                                                class="border-b-2 border-gray-200 md:px-4 md:py-3 tabular-nums">
+                                                                {{
+                                                                    item.price
+                                                                }}</td>
+                                                            <td class="border-b-2 border-gray-200 md:px-4 md:py-3">
                                                                 <select name="quantity" v-model="item.quantity"
                                                                     class=" focus:ring-slate-400 focus:ring-1 ring-slate-400  hover:ring-1">
                                                                     <option v-for="q in quantity" :value="q">{{ q }}
                                                                     </option>
                                                                 </select>
                                                             </td>
-                                                            <td class="border-b-2 border-gray-200 px-4 py-3">
+                                                            <td class="border-b-2 border-gray-200 md:px-4 md:py-3">
                                                                 {{ item.price * item.quantity }}
                                                             </td>
                                                         </tr>
@@ -147,7 +153,7 @@ const setCustomerID = id => {
                                                     <label for="price" class="leading-7 text-sm text-gray-600">
                                                         合計金額</label>
                                                     <div
-                                                        class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                                        class="w-full bg-opacity-50 rounded border border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 md:py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                                         {{ totalPrice }} 円
                                                     </div>
                                                 </div>

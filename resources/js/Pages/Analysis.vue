@@ -57,7 +57,9 @@ const getData = async () => {
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">データ分析</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                データ分析
+            </h2>
         </template>
 
         <div class="py-12">
@@ -67,9 +69,9 @@ const getData = async () => {
 
                         <form @submit.prevent="getData">
                             <div class="p-6">
-                                <div class="w-1/12 text-center font-medium border-b-2 mb-6">
+                                <div class="font-semibold text-gray-700 mb-2">
                                     分析方法</div>
-                                <div class=" md:flex md:space-x-6 pl-6">
+                                <div class="md:flex md:space-x-6 pl-6">
                                     <div>
                                         <input type="radio" v-model="form.type" value="perDay" checked
                                             class="w-4 h-4 text-slate-400 bg-slate-100 border-gray-300 focus:ring-slate-400 focus:ring-1">
@@ -114,67 +116,78 @@ const getData = async () => {
                                 </div>
                             </div>
 
-                            <div v-if="form.type === 'rfm'" class="py-4">
-                                <table class="mx-auto border-separate border-spacing-4">
-                                    <thead class="text-left text-gray-700">
-                                        <tr>
-                                            <th class="border-b">ランク</th>
-                                            <th class="border-b">最新購入日(Recency)</th>
-                                            <th class="border-b">購入回数(Frequency)</th>
-                                            <th class="border-b">購入金額合計(Monetary)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center">5</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[0]"> 日以内</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[4]"> 回以上</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-32 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[8]"> 円以上</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">4</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[1]"> 日以内</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[5]"> 回以上</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-32 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[9]"> 円以上</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">3</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[2]"> 日以内</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[6]"> 回以上</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-32 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[10]"> 円以上</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">2</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[3]"> 日以内</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[7]"> 回以上</td>
-                                            <td><input type="number"
-                                                    class="box-border h-6 w-32 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
-                                                    v-model="form.rfmPrms[11]"> 円以上</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div v-if="form.type === 'rfm'">
+                                <div class="p-4">
+                                    <table class="mx-auto md:border-separate border-spacing-6">
+                                        <thead class="text-left text-gray-700">
+                                            <tr>
+                                                <th class="border-b-2">ランク</th>
+                                                <th class="border-b-2">最新購入日(R)</th>
+                                                <th class="border-b-2">購入回数(F)</th>
+                                                <th class="border-b-2">購入金額合計(F)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">5</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-24 p-4 border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[0]"> 日以内</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-24 p-4 border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[4]"> 回以上</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-32 p-4 border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[8]"> 円以上</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">4</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[1]"> 日以内</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[5]"> 回以上</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-32 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[9]"> 円以上</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">3</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[2]"> 日以内</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[6]"> 回以上</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-32 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[10]"> 円以上</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[3]"> 日以内</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-24 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[7]"> 回以上</td>
+                                                <td><input type="number"
+                                                        class="box-border h-6 w-32 p-4  border rounded bg-opacity-50 border-gray-300 focus:border-slate-500 focus:bg-white focus:ring-2 focus:ring-slate-200 text-base outline-none text-gray-700 leading-8 transition-colors duration-200 ease-in-out bg-gray-100"
+                                                        v-model="form.rfmPrms[11]"> 円以上</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center text-base text-gray-700">
+                                                    {{ form.rfmPrms[3] + 1 }} 日以上</td>
+                                                <td class="text-center text-base text-gray-700">
+                                                    {{ form.rfmPrms[7] - 1 }} 回以下</td>
+                                                <td class="text-center text-base  text-gray-700">
+                                                    {{ form.rfmPrms[11] }} 円未満</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </form>
 

@@ -42,7 +42,7 @@ class ItemController extends Controller
 
         return to_route('items.index')
             ->with([
-                'message' => '登録しました。',
+                'message' => '登録しました',
                 'status' => 'success'
             ]);
     }
@@ -82,7 +82,7 @@ class ItemController extends Controller
 
         return to_route('items.index')
             ->with([
-                'message' => '更新しました。',
+                'message' => '更新しました',
                 'status' => 'success'
             ]);
     }
@@ -96,7 +96,7 @@ class ItemController extends Controller
 
         return to_route('items.index')
             ->with([
-                'message' => '削除しました。',
+                'message' => '削除しました',
                 'status' => 'danger',
             ]);
     }

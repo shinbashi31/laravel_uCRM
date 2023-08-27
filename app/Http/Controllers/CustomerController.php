@@ -56,7 +56,7 @@ class CustomerController extends Controller
         ]);
 
         return to_route('customers.index')->with([
-            'message' => '登録しました。',
+            'message' => '登録しました',
             'status' => 'success'
         ]);
     }
@@ -102,7 +102,7 @@ class CustomerController extends Controller
 
         return to_route('customers.index')
             ->with([
-                'message' => '更新しました。',
+                'message' => '更新しました',
                 'status' => 'success'
             ]);
     }
@@ -116,7 +116,7 @@ class CustomerController extends Controller
 
         return to_route('customers.index')
             ->with([
-                'message' => '削除しました。',
+                'message' => '削除しました',
                 'status' => 'danger'
             ]);
     }
